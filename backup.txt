@@ -1,0 +1,143 @@
+mergesort:
+
+
+object Merge_Sort {
+  def merge(A:Array[Int], start:Int, middle:Int, end:Int): Array[Int] = {
+    val n1:Int = middle - start  //
+    val n2:Int = end - middle + 1
+    val L :Array[Int] = new Array[Int](n1 + 1)
+    val R: Array[Int] = new Array[Int](n2 + 1)
+
+    for (i <- 0 until n1) {
+      L(i) = A(start + i)
+    }
+    for (j <- 0 until n2) {
+      R(j) = A(middle + j )
+    }
+
+//    println(L.toList + "\n" +  R.toList)
+    L(n1) = Int.MaxValue
+    R(n1) = Int.MaxValue
+    var i = 0
+    var j = 0
+    for (k <- start until end) {
+      if (L(i) <= R(j)) {
+        A(k) = L(i)
+//        println(L(i) + " Adding L(i)")
+        i = i + 1
+      }
+      else {
+        A(k) = R(j)
+//        println(R(j) + " Adding R(j)" )
+        j = j + 1
+      }
+    }
+    A
+//    println(A.toList)
+  }
+
+  def merge_sort(A:Array[Int], p:Int, r:Int): Array[Int] = {
+    if (p < r) {
+      val q: Int = math.floor((p + r) / 2).toInt
+      merge_sort(A, p, q)
+      merge_sort(A, q , r - 1)
+      merge(A, p ,q, r - 1)
+    }
+    A
+  }
+
+  def mergeSort(A: Array[Int]): Array[Int] = {
+    merge_sort(A, math.floor(A.length / 2).toInt, A.length - 1)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val a: Array[Int] = Array(2,4,6,1,3,7) //,21412,1241,4242,242,42141,4124,421421,242,2,1,4,3
+    val b :Array[Int] = Array(2,5,7,1,6,8)
+    println(merge(a, 0, math.floor(a.length/2).toInt, a.length - 1).toList)
+//    println(mergeSort(a).toList)
+    println(merge(b, 0, math.floor(a.length/2).toInt, a.length - 1).toList)
+    println(mergeSort(b).toList)
+  }
+// Todo: 523 362
+  //  52 3 36 2
+  //  5 2 3 3 6 2
+  //  25 3 36 2
+  //  235 236
+  //  223356,
+
+}
+
+
+
+
+
+
+
+
+/////////
+
+object Merge_Sort {
+  def merge(A:Array[Int], start:Int, middle:Int, end:Int): Array[Int] = {
+    val n1:Int = middle - start + 1
+    val n2:Int = end - middle
+    val L :Array[Int] = new Array[Int](n1 + 1)
+    val R: Array[Int] = new Array[Int](n2 + 1)
+
+    for (i <- 1 to n1) {
+      L(i) = A(start + i - 1)
+    }
+    for (j <- 1 to n2) {
+      R(j) = A(middle + j )
+    }
+
+//    println(L.toList + "\n" +  R.toList)
+    L(n1 + 1) = Int.MaxValue
+    R(n1 + 1) = Int.MaxValue
+    var i = 1
+    var j = 1
+    for (k <- start to end) {
+      if (L(i) <= R(j)) {
+        A(k) = L(i)
+//        println(L(i) + " Adding L(i)")
+        i = i + 1
+      }
+      else {
+        A(k) = R(j)
+//        println(R(j) + " Adding R(j)" )
+        j = j + 1
+      }
+    }
+    A
+//    println(A.toList)
+  }
+
+  def merge_sort(A:Array[Int], p:Int, r:Int): Array[Int] = {
+    if (p < r) {
+      val q: Int = math.floor((p + r) / 2).toInt
+      merge_sort(A, p, q)
+      merge_sort(A, q + 1, r)
+      merge(A, p ,q, r)
+    }
+    A
+  }
+
+  def mergeSort(A: Array[Int]): Array[Int] = {
+    merge_sort(A, math.floor(A.length / 2).toInt, A.length)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val a: Array[Int] = Array(2,4,6,1,3,7) //,21412,1241,4242,242,42141,4124,421421,242,2,1,4,3
+    val b :Array[Int] = Array(2,5,7,1,6,8)
+//    println(merge(a, 1, math.floor(a.length/2).toInt, a.length ).toList)
+    println(mergeSort(a).toList)
+//    println(merge(b, 1, math.floor(a.length/2).toInt, a.length ).toList)
+//    println(mergeSort(b).toList)
+  }
+// Todo: 523 362
+  //  52 3 36 2
+  //  5 2 3 3 6 2
+  //  25 3 36 2
+  //  235 236
+  //  223356,
+
+}

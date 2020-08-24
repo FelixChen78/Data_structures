@@ -1,0 +1,18 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <ScalaCodeStyleSettings>
+      <option name="alwaysUsedImports">
+        <array>
+          <option value="org.scalatest._" />
+          <option value="scala.collection.immutable._" />
+          <option value="scalafx.animation.AnimationTimer" />
+          <option value="scalafx.application.JFXApp" />
+          <option value="scalafx.application.JFXApp.PrimaryStage" />
+          <option value="scalafx.scene.paint.Color" />
+          <option value="scalafx.scene.scene" />
+          <option value="scalafx.scene.shape.shape" />
+        </array>
+      </option>
+    </ScalaCodeStyleSettings>
+  </code_scheme>
+</component>
