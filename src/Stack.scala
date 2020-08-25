@@ -1,5 +1,5 @@
 /** Reference: Introduction to Algorithms
- * Authors: Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
+ * Author(s): Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
 class Stack {
   var top: Int = -1
   var stack: Array[Int] = new Array[Int](10000)

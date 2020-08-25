@@ -1,5 +1,5 @@
 /** Reference: Introduction to Algorithms
- * Authors: Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
+ * Author(s): Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
 object MergeSort {
 
   /** recursively divides the array until each array has a single element then combines into full array using merge */

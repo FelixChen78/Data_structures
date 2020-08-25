@@ -1,5 +1,5 @@
 /** Reference: Introduction to Algorithms
- * Authors: Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
+ * Author(s): Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
 object InsertionSortB {
 
   /** sorts array in decreasing order using insertion sort */

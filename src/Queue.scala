@@ -1,5 +1,5 @@
 /** Reference: Introduction to Algorithms
- * Authors: Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
+ * Author(s): Charles E. Leiserson, Clifford Stein, Ronald Rivest, and Thomas H. Cormen */
 class Queue {
   var head, tail, length = 0
   var queue: Array[Int] = new Array[Int](10000)
