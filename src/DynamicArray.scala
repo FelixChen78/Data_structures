@@ -3,7 +3,7 @@ class DynamicArray(size: Int) {
 
   var dynamicArray: Array[Int] = new Array[Int](size)
   var pointer: Int = 0
-  var length = dynamicArray.length
+  var length: Int = dynamicArray.length
 
   /** creates a new larger array and copies value from old to new array */
   def increase(): Unit = {

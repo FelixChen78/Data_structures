@@ -75,7 +75,6 @@ class DoublyLinkedList[T](var head: LinkedListNode[T] = null) {
       print(current.next.value)
       current = current.next
     }
-
     print(")")
   }
 
